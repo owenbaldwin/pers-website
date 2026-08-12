@@ -52,20 +52,20 @@ export class App {
       name: 'Project one',
       description: 'A short, outcome-focused description of a project you are proud of.',
       technologies: 'Angular · TypeScript · SCSS',
-      url: 'https://github.com/owenbaldwin2',
+      url: 'https://github.com/owenbaldwin',
     },
     {
       name: 'Project two',
       description: 'Explain what you made, who it helped, and what made the work interesting.',
       technologies: 'Add your technology stack',
-      url: 'https://github.com/owenbaldwin2',
+      url: 'https://github.com/owenbaldwin',
     },
     {
       name: 'Project three',
       description:
         'Use this space for open-source work, a case study, or an independent experiment.',
       technologies: 'Add your technology stack',
-      url: 'https://github.com/owenbaldwin2',
+      url: 'https://github.com/owenbaldwin',
     },
   ];
 }
