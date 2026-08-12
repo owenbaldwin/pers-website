@@ -1,0 +1,36 @@
+<div class="shell header__inner">
+  <a class="wordmark" routerLink="/" (click)="closeMenu()">Owen Baldwin</a>
+
+  <button
+    class="nav-toggle"
+    type="button"
+    aria-controls="primary-nav"
+    [attr.aria-expanded]="menuOpen()"
+    (click)="toggleMenu()"
+  >
+    {{ menuOpen() ? 'Close' : 'Menu' }}
+  </button>
+
+  <nav id="primary-nav" class="nav" [class.is-open]="menuOpen()" aria-label="Primary">
+    <ul>
+      <li>
+        <a routerLink="/" fragment="selected-work" (click)="closeMenu()">Work</a>
+      </li>
+      <li>
+        <a routerLink="/writing" routerLinkActive="is-current" (click)="closeMenu()">Writing</a>
+      </li>
+      <li>
+        <a
+          routerLink="/about"
+          routerLinkActive="is-current"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+          >About</a
+        >
+      </li>
+      <li>
+        <a routerLink="/about" fragment="contact" (click)="closeMenu()">CV / Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>

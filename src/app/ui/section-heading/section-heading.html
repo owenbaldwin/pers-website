@@ -1,0 +1,11 @@
+<div class="section-heading">
+  @if (eyebrow()) {
+    <p class="t-label">{{ eyebrow() }}</p>
+  }
+  <div class="section-heading__row">
+    <h2 class="t-h2" [attr.id]="headingId() || null">{{ heading() }}</h2>
+    @if (aside()) {
+      <p class="t-caption">{{ aside() }}</p>
+    }
+  </div>
+</div>

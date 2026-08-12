@@ -1,0 +1,182 @@
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="shell">
+    <p class="t-label t-label--accent hero__eyebrow">
+      AI Product · Solutions · Creative Technology
+    </p>
+
+    <h1 id="hero-heading" class="t-display hero__headline">
+      AI products for complex, real-world workflows.
+    </h1>
+
+    <div class="hero__grid grid-12">
+      <div class="hero__copy prose">
+        <p class="t-lede">
+          I work at the intersection of AI, product and domain expertise — understanding how people
+          actually work, turning messy processes into structured problems, and building practical
+          systems around them.
+        </p>
+        <p>
+          For the past several years, my main focus has been LVFX, an AI-native platform designed
+          around the realities of VFX budgeting and production.
+        </p>
+        <p>
+          My work spans product discovery, workflow design, AI prototyping, domain modelling and
+          hands-on implementation. I'm particularly interested in roles where the problem is not
+          simply “write the software”, but “work out what should exist, why, and how we make it
+          useful.”
+        </p>
+      </div>
+
+      <div class="hero__aside">
+        <p class="hero__status">
+          Based in London.<br />
+          Currently exploring AI product, solutions and delivery roles.
+        </p>
+        <div class="hero__actions">
+          <app-arrow-link
+            label="View selected work"
+            to="/"
+            fragment="selected-work"
+            tone="primary"
+          />
+          <app-arrow-link label="About me" to="/about" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="selected-work" aria-labelledby="work-heading">
+  <div class="shell">
+    <app-section-heading
+      eyebrow="Case studies"
+      heading="Selected Work"
+      headingId="work-heading"
+      aside="2022 — present"
+    />
+
+    <article class="project">
+      <div class="project__meta">
+        <span class="t-index">01</span>
+        <p class="project__name">LVFX</p>
+        <p class="t-caption">AI-native VFX production &amp; budgeting platform</p>
+      </div>
+
+      <div class="project__body">
+        <h3 class="project__title">Turning screenplays into structured production intelligence</h3>
+        <div class="prose">
+          <p>Film and VFX planning begins with an unusually messy input: a screenplay.</p>
+          <p>
+            I helped turn that unstructured starting point into a system capable of identifying
+            production requirements, structuring scenes, shots, assets and effects, applying
+            production assumptions, and connecting that information to downstream VFX planning and
+            budgeting.
+          </p>
+          <p>
+            The difficult part wasn't simply calling an LLM. It was understanding what information
+            production teams actually need, how those concepts relate to each other, what AI should
+            decide, what humans should control, and how unreliable model output becomes a usable
+            production workflow.
+          </p>
+        </div>
+        <app-arrow-link label="Read the case study" to="/work/lvfx" tone="primary" />
+      </div>
+    </article>
+
+    <app-media-placeholder
+      class="project__media"
+      label="LVFX — product screenshot"
+      note="Interface imagery to be added"
+      caption="Breakdown view: scenes, shots, assets and assumptions derived from a screenplay."
+      ratio="16 / 9"
+    />
+
+    <article class="project project--secondary">
+      <div class="project__meta">
+        <span class="t-index">02</span>
+        <p class="project__name">Workflow Automation</p>
+        <p class="t-caption t-caption--flag">Case study coming soon</p>
+      </div>
+
+      <div class="project__body">
+        <h3 class="project__title project__title--small">
+          Finding opportunities for AI inside everyday operations
+        </h3>
+        <div class="prose">
+          <p>
+            Alongside my technology work, I've worked inside a non-technical operational
+            environment. That has given me a useful perspective on AI adoption: the biggest
+            opportunities are often mundane processes that nobody thinks of as technology problems.
+          </p>
+          <p>
+            I've explored and built lightweight tools around real operational workflows — starting
+            with the process rather than the technology.
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="approach-heading">
+  <div class="shell">
+    <app-section-heading
+      eyebrow="Method"
+      heading="How I work"
+      headingId="approach-heading"
+      aside="Four working principles"
+    />
+
+    <ol class="principles">
+      @for (principle of principles; track principle.index) {
+        <li class="principle">
+          <span class="t-index">{{ principle.index }}</span>
+          <h3 class="principle__title">{{ principle.title }}</h3>
+          <p class="principle__body">{{ principle.body }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="capabilities-heading">
+  <div class="shell">
+    <app-section-heading
+      eyebrow="Capabilities"
+      heading="Areas I work in"
+      headingId="capabilities-heading"
+    />
+
+    <ul class="capabilities">
+      @for (capability of capabilities; track capability) {
+        <li>{{ capability }}</li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="section band positioning" aria-labelledby="positioning-heading">
+  <div class="shell">
+    <p class="t-label">Positioning</p>
+    <h2 id="positioning-heading" class="positioning__heading">A useful combination</h2>
+
+    <div class="positioning__grid grid-12">
+      <p class="positioning__lead">
+        I don't fit neatly into the traditional distinction between product and engineering.
+      </p>
+      <div class="positioning__copy prose">
+        <p>
+          I've had to move between conversations with domain experts, product decisions, data
+          structures, AI behaviour, implementation and demos because building an early-stage product
+          required all of them.
+        </p>
+        <p>That's also the kind of work I want to continue doing.</p>
+        <p>
+          I'm most useful where there is ambiguity at the beginning of the problem: a complex
+          workflow, specialised users, emerging technology and no obvious specification yet.
+        </p>
+        <app-arrow-link label="Read the LVFX case study" to="/work/lvfx" tone="primary" />
+      </div>
+    </div>
+  </div>
+</section>

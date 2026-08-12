@@ -1,0 +1,178 @@
+<article class="case">
+  <header class="case__hero">
+    <div class="shell">
+      <p class="t-label t-label--accent case__eyebrow">Case study — LVFX</p>
+      <h1 class="t-display case__headline">From screenplay to production data.</h1>
+
+      <dl class="case__facts">
+        <div>
+          <dt class="t-label">Role</dt>
+          <dd>Product &amp; implementation</dd>
+        </div>
+        <div>
+          <dt class="t-label">Domain</dt>
+          <dd>VFX breakdown, planning &amp; budgeting</dd>
+        </div>
+        <div>
+          <dt class="t-label">Focus</dt>
+          <dd>AI-native workflow design</dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="intro-heading">
+    <div class="shell case__two-col">
+      <h2 id="intro-heading" class="visually-hidden">Introduction</h2>
+      <div class="prose case__lede">
+        <p class="t-lede">
+          A screenplay contains enormous amounts of production information, but almost none of it
+          arrives in a structured form.
+        </p>
+        <p>
+          For VFX teams, understanding what a project requires can involve manually reading scripts,
+          identifying relevant moments, interpreting creative intent, anticipating assets and
+          effects, making assumptions and eventually translating all of that into something that can
+          be estimated.
+        </p>
+        <p>
+          This isn't simply a document-extraction problem. Much of the valuable information is
+          implicit, contextual and dependent on production judgement.
+        </p>
+      </div>
+    </div>
+
+    <div class="shell">
+      <blockquote class="case__question">
+        <p>
+          Could AI help turn that early ambiguity into structured, useful production intelligence
+          without pretending to replace the people making the decisions?
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="worked-on-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Contribution"
+        heading="What I worked on"
+        headingId="worked-on-heading"
+        aside="Product and implementation"
+      />
+
+      <div class="case__split">
+        <p class="case__note">My role crossed product and implementation.</p>
+
+        <ol class="contributions">
+          @for (item of contributions; track item; let i = $index) {
+            <li>
+              <span class="t-index">{{ pad(i + 1) }}</span>
+              <span>{{ item }}</span>
+            </li>
+          }
+        </ol>
+      </div>
+
+      <div class="prose case__afterword">
+        <p>
+          The interesting challenge was rarely whether an LLM could generate an answer. It was
+          deciding what the model should be asked to do, what context it needed, how its output
+          should be represented, and how a human should review and change it afterwards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="learned-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Reflections"
+        heading="What I learned"
+        headingId="learned-heading"
+      />
+
+      <div class="learnings">
+        @for (learning of learnings; track learning.index) {
+          <section class="learning">
+            <span class="t-index">{{ learning.index }}</span>
+            <h3 class="learning__title">{{ learning.title }}</h3>
+            <div class="prose learning__body">
+              @for (paragraph of learning.body; track paragraph) {
+                <p>{{ paragraph }}</p>
+              }
+            </div>
+          </section>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="system-heading">
+    <div class="shell">
+      <app-section-heading eyebrow="Architecture" heading="The system" headingId="system-heading" />
+
+      <p class="case__note case__note--wide">
+        Today the product connects several stages of the workflow:
+      </p>
+
+      <ol class="flow" aria-label="Workflow stages, in order">
+        @for (stage of stages; track stage) {
+          <li class="flow__stage">
+            <span class="flow__label">{{ stage }}</span>
+          </li>
+        }
+      </ol>
+
+      <div class="prose case__afterword">
+        <p>
+          Behind that flow are a mixture of structured application logic, LLM orchestration and
+          retrieval over historical information.
+        </p>
+      </div>
+
+      <div class="case__media">
+        <app-media-placeholder
+          label="Product screenshots"
+          note="Interface imagery to be added"
+          ratio="4 / 3"
+        />
+        <app-media-placeholder
+          label="3-minute product walkthrough"
+          note="Video to be added"
+          ratio="4 / 3"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section band case__closing" aria-labelledby="closing-heading">
+    <div class="shell case__two-col">
+      <div>
+        <p class="t-label">In closing</p>
+        <h2 id="closing-heading" class="case__closing-heading">Why this work matters to me</h2>
+      </div>
+
+      <div class="prose case__closing-copy">
+        <p>
+          LVFX taught me that the most interesting AI problems often aren't about model capability.
+        </p>
+        <p class="case__closing-line">
+          They're about translating between two worlds: what a technology can do and how a
+          profession actually works.
+        </p>
+        <p>That's the intersection I want to keep working in.</p>
+
+        <div class="case__actions">
+          <app-arrow-link
+            label="See selected work"
+            to="/"
+            fragment="selected-work"
+            tone="primary"
+          />
+          <app-arrow-link label="Get in touch" to="/about" fragment="contact" />
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

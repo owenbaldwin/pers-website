@@ -1,0 +1,13 @@
+<figure class="media">
+  <div class="media__frame" [style.aspect-ratio]="ratio()">
+    <div class="media__inner">
+      <p class="t-label">{{ label() }}</p>
+      @if (note()) {
+        <p class="media__note">{{ note() }}</p>
+      }
+    </div>
+  </div>
+  @if (caption()) {
+    <figcaption class="t-caption">{{ caption() }}</figcaption>
+  }
+</figure>

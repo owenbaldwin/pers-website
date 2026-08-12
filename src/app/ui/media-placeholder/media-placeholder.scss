@@ -1,0 +1,63 @@
+.media {
+  margin: 0;
+}
+
+/* An understated presentation frame: a lifted charcoal surface, warm hairline
+   border and faint column rules that read as a grid once artwork lands here. */
+.media__frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: var(--s-4);
+  background:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--color-border) 40%, transparent) 1px,
+      transparent 1px
+    ),
+    var(--color-surface);
+  background-size: 6.25% 100%;
+  border: 1px solid var(--color-border);
+}
+
+/* Restrained crop marks rather than an empty box. */
+.media__frame::before,
+.media__frame::after {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: '';
+}
+
+.media__frame::before {
+  top: 0.75rem;
+  left: 0.75rem;
+  border-top: 1px solid var(--color-accent-deep);
+  border-left: 1px solid var(--color-accent-deep);
+}
+
+.media__frame::after {
+  right: 0.75rem;
+  bottom: 0.75rem;
+  border-right: 1px solid var(--color-accent-deep);
+  border-bottom: 1px solid var(--color-accent-deep);
+}
+
+.media__inner {
+  position: relative;
+  max-width: 26rem;
+  text-align: center;
+}
+
+.media__note {
+  margin-top: 0.65rem;
+  color: var(--color-text-secondary);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+figcaption {
+  margin-top: var(--s-2);
+}
