@@ -1,0 +1,39 @@
+<section class="writing" aria-labelledby="writing-heading">
+  <div class="shell">
+    <p class="t-label t-label--accent writing__eyebrow">Writing</p>
+    <h1 id="writing-heading" class="t-display writing__headline">Notes</h1>
+
+    <p class="t-lede writing__intro">
+      Writing about AI, product building, creative technology and what happens when emerging
+      technology meets specialised real-world workflows.
+    </p>
+
+    <ol class="notes">
+      @for (note of notes; track note.title; let i = $index) {
+        <li class="note">
+          <span class="t-index">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+
+          <div class="note__body">
+            @if (note.slug) {
+              <h2 class="note__title">
+                <a class="link" [href]="'/writing/' + note.slug">{{ note.title }}</a>
+              </h2>
+            } @else {
+              <h2 class="note__title note__title--pending">{{ note.title }}</h2>
+            }
+
+            @if (note.summary) {
+              <p class="t-caption note__summary">{{ note.summary }}</p>
+            }
+          </div>
+
+          <span class="note__status t-label">{{ note.date ?? 'Forthcoming' }}</span>
+        </li>
+      }
+    </ol>
+
+    <p class="t-caption writing__foot">
+      Nothing is published yet — these are the pieces currently in progress.
+    </p>
+  </div>
+</section>

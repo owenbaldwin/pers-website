@@ -1,0 +1,63 @@
+.writing {
+  padding-block: clamp(3.5rem, 8vw, 7rem) clamp(4rem, 8vw, 7rem);
+}
+
+.writing__eyebrow {
+  padding-bottom: var(--s-2);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--color-border-strong);
+}
+
+.writing__headline {
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.writing__intro {
+  max-width: 38rem;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.notes {
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.note {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto;
+  gap: var(--s-2) var(--s-3);
+  align-items: baseline;
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
+  border-bottom: var(--rule-hair);
+}
+
+.note__title {
+  max-width: 34ch;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+}
+
+.note__title--pending {
+  color: var(--color-text-secondary);
+}
+
+.note__summary {
+  margin-top: var(--s-1);
+  max-width: var(--measure);
+}
+
+.note__status {
+  white-space: nowrap;
+}
+
+.writing__foot {
+  margin-top: var(--s-4);
+}
+
+@media (max-width: 44rem) {
+  .note {
+    grid-template-columns: 2.75rem minmax(0, 1fr);
+  }
+
+  .note__status {
+    grid-column: 2;
+  }
+}

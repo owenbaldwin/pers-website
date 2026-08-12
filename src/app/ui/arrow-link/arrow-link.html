@@ -1,0 +1,16 @@
+@if (to()) {
+  <a
+    class="cta"
+    [class.cta--primary]="tone() === 'primary'"
+    [routerLink]="to()"
+    [fragment]="fragment() || undefined"
+  >
+    <span>{{ label() }}</span>
+    <span class="cta__arrow" aria-hidden="true">&#8594;</span>
+  </a>
+} @else {
+  <a class="cta" [class.cta--primary]="tone() === 'primary'" [href]="href()" rel="noreferrer">
+    <span>{{ label() }}</span>
+    <span class="cta__arrow" aria-hidden="true">&#8594;</span>
+  </a>
+}
