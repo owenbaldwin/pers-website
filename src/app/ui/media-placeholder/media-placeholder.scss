@@ -58,6 +58,20 @@
   font-size: 1.05rem;
 }
 
+/* Once a real screenshot lands, drop the grid pattern and let the image sit
+   inside the same lifted frame, crop marks and all. */
+.media__frame--image {
+  padding: var(--s-2);
+  background: var(--color-surface);
+}
+
+.media__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 figcaption {
   margin-top: var(--s-2);
 }

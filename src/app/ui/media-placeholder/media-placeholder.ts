@@ -16,4 +16,6 @@ export class MediaPlaceholder {
   readonly caption = input<string>('');
   /** CSS aspect ratio, e.g. '16 / 10'. */
   readonly ratio = input<string>('16 / 10');
+  /** Once a real screenshot exists, pass its URL here to replace the placeholder frame. */
+  readonly src = input<string>('');
 }

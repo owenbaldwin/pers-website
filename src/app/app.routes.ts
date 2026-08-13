@@ -12,6 +12,12 @@ export const routes: Routes = [
     title: 'LVFX — From screenplay to production data | Owen Baldwin',
   },
   {
+    path: 'work/inventory-app',
+    loadComponent: () => import('./pages/inventory-app/inventory-app').then((m) => m.InventoryApp),
+    title:
+      'Workflow Automation — From spreadsheet chase to a five-day inventory count | Owen Baldwin',
+  },
+  {
     path: 'about',
     loadComponent: () => import('./pages/about/about').then((m) => m.About),
     title: 'About — Owen Baldwin',

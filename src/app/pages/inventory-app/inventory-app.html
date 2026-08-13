@@ -1,8 +1,10 @@
 <article class="case">
   <header class="case__hero">
     <div class="shell">
-      <p class="t-label t-label--accent case__eyebrow">Case study — LVFX</p>
-      <h1 class="t-display case__headline">From screenplay to production data.</h1>
+      <p class="t-label t-label--accent case__eyebrow">Case study — Workflow Automation</p>
+      <h1 class="t-display case__headline">
+        From spreadsheet chase to a five-day inventory count.
+      </h1>
 
       <dl class="case__facts">
         <div>
@@ -11,11 +13,11 @@
         </div>
         <div>
           <dt class="t-label">Domain</dt>
-          <dd>VFX breakdown, planning &amp; budgeting</dd>
+          <dd>Facilities, IT &amp; campus asset management</dd>
         </div>
         <div>
           <dt class="t-label">Focus</dt>
-          <dd>AI-native workflow design</dd>
+          <dd>Practical automation, not AI for its own sake</dd>
         </div>
       </dl>
     </div>
@@ -26,18 +28,16 @@
       <h2 id="intro-heading" class="visually-hidden">Introduction</h2>
       <div class="prose case__lede">
         <p class="t-lede">
-          A screenplay contains enormous amounts of production information, but almost none of it
-          arrives in a structured form.
+          Alongside my work building technology products, I work inside the facilities/IT team of a
+          London music university, a vantage point I keep coming back to.
         </p>
         <p>
-          For VFX teams, understanding what a project requires can involve manually reading scripts,
-          identifying relevant moments, interpreting creative intent, anticipating assets and
-          effects, making assumptions and eventually translating all of that into something that can
-          be estimated.
+          It's shown me that some of the highest-value automation opportunities are hidden inside
+          mundane operational processes that nobody considers a technology problem.
         </p>
         <p>
-          This isn't simply a document-extraction problem. Much of the valuable information is
-          implicit, contextual and dependent on production judgement.
+          Rather than starting with &ldquo;Where can we use AI?&rdquo;, I prefer to start with a
+          different question.
         </p>
       </div>
     </div>
@@ -45,8 +45,7 @@
     <div class="shell">
       <blockquote class="case__question">
         <p>
-          Could AI help turn that early ambiguity into structured, useful production intelligence
-          without pretending to replace the people making the decisions?
+          Where are people repeatedly spending time on work that shouldn't require this much effort?
         </p>
       </blockquote>
     </div>
@@ -62,7 +61,9 @@
       />
 
       <div class="case__split">
-        <p class="case__note">My role crossed product and implementation.</p>
+        <p class="case__note">
+          The problem: thousands of physical assets, checked by hand once a year.
+        </p>
 
         <ol class="contributions">
           @for (item of contributions; track item; let i = $index) {
@@ -76,9 +77,9 @@
 
       <div class="prose case__afterword">
         <p>
-          The interesting challenge was rarely whether an LLM could generate an answer. It was
-          deciding what the model should be asked to do, what context it needed, how its output
-          should be represented, and how a human should review and change it afterwards.
+          The technology wasn't the hard part. Introducing something new into an operational
+          environment, where security, GDPR, budgets, maintenance and ease of use all mattered,
+          was the hard part.
         </p>
       </div>
     </div>
@@ -113,7 +114,8 @@
       <app-section-heading eyebrow="Architecture" heading="The system" headingId="system-heading" />
 
       <p class="case__note case__note--wide">
-        Today the product connects several stages of the workflow:
+        The finished workflow removed the slowest part of the old process: manually finding and
+        updating individual records.
       </p>
 
       <ol class="flow" aria-label="Workflow stages, in order">
@@ -126,27 +128,24 @@
 
       <div class="prose case__afterword">
         <p>
-          Behind that flow are a mixture of structured application logic, LLM orchestration and
-          retrieval over historical information.
+          Behind that simple flow is ordinary application logic, not machine learning, the
+          reliability came from keeping the matching deterministic and the state local to the
+          browser.
         </p>
       </div>
 
       <div class="case__media">
         <app-media-placeholder
-          label="LVFX — product screenshot"
-          src="https://i.ibb.co/hJcwRx1H/Screenshot-2026-08-13-at-20-10-25.png"
+          label="Product screenshots"
+          src="https://i.ibb.co/VpwMcGrj/Screenshot-2026-08-13-at-20-27-37.png"
           ratio="4 / 3"
         />
-        <app-media-placeholder
-          label="LVFX — product screenshot"
-          src="https://i.ibb.co/5X3zp7Zc/Screenshot-2026-08-13-at-20-10-42.png"
+        <!-- <app-media-placeholder
+          label="Workflow walkthrough"
+          note="Video to be added"
           ratio="4 / 3"
-        />
+        /> -->
       </div>
-      <p class="case__media-note t-caption">
-        These are promotional screenshots created for illustrative purposes, not the actual
-        in-app interface. For legal reasons the live product can't be shown publicly here.
-      </p>
     </div>
   </section>
 
@@ -159,13 +158,15 @@
 
       <div class="prose case__closing-copy">
         <p>
-          LVFX taught me that the most interesting AI problems often aren't about model capability.
+          This wasn't a revolutionary piece of software. It was a small tool applied to the right
+          operational bottleneck: five days of one person's time, working four hours a day, instead
+          of multiple weeks with two.
         </p>
         <p class="case__closing-line">
-          They're about translating between two worlds: what a technology can do and how a
-          profession actually works.
+          Sometimes AI belongs inside the product. Sometimes AI simply lets you build the right
+          product faster.
         </p>
-        <p>That's the intersection I want to keep working in.</p>
+        <p>Knowing the difference is the interesting part.</p>
 
         <div class="case__actions">
           <app-arrow-link
