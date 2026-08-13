@@ -13,7 +13,7 @@ npm install   # required: the site now self-hosts its typefaces via @fontsource-
 npm start
 ```
 
-Open [http://localhost:4200](http://localhost:4200) after the development server starts.
+Open [http://localhost:4400](http://localhost:4400) after the development server starts.
 
 ## Structure
 
