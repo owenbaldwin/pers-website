@@ -18,16 +18,15 @@ interface Learning {
 })
 export class Lvfx {
   protected readonly contributions: string[] = [
-    'Understanding VFX breakdown and budgeting workflows',
-    'Translating production concepts into a domain model',
-    'Designing the product workflow',
-    'Experimenting with LLM-based screenplay analysis',
-    'Structuring scenes, shots, assets, effects and assumptions',
-    'Incorporating production guidance into AI-generated output',
-    'Connecting current projects with historical production information',
+    'Understanding how VFX breakdown and budgeting actually happens;',
+    'Translating production concepts into a usable data model;',
+    'Designing the workflow from screenplay ingestion through to cost estimation;',
+    'Experimenting with multi-stage LLM analysis rather than relying on a single prompt;',
+    'Structuring scenes, shots, assets, effects and assumptions into a usable data model;',
+    'Incorporating production guidance and historical project information into AI-assisted analysis;',
     'Designing AI-assisted costing workflows',
     'Building and iterating on the application',
-    'Presenting prototypes and gathering feedback from experienced industry practitioners',
+    'Presenting prototypes and using feedback from experienced VFX producers and supervisors to change the product.',
   ];
 
   protected readonly learnings: Learning[] = [
@@ -42,8 +41,7 @@ export class Lvfx {
       index: '02',
       title: 'Domain knowledge changes the problem.',
       body: [
-        '“Analyse this screenplay” sounds simple until you ask what analysis actually means to a VFX producer, supervisor or estimator.',
-        'The useful categories emerge from understanding the job rather than the model.',
+        'The useful categories, relationships and controls emerged from understanding VFX production rather than from the capabilities of the language model.',
       ],
     },
     {
@@ -73,5 +71,6 @@ export class Lvfx {
     'Assumptions',
     'Historical context',
     'Cost estimation',
+    'Vendor bidding'
   ];
 }

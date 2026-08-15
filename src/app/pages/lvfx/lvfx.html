@@ -7,7 +7,7 @@
       <dl class="case__facts">
         <div>
           <dt class="t-label">Role</dt>
-          <dd>Product &amp; implementation</dd>
+          <dd>Product design, AI workflow &amp; implementation</dd>
         </div>
         <div>
           <dt class="t-label">Domain</dt>
@@ -26,18 +26,22 @@
       <h2 id="intro-heading" class="visually-hidden">Introduction</h2>
       <div class="prose case__lede">
         <p class="t-lede">
-          A screenplay contains enormous amounts of production information, but almost none of it
-          arrives in a structured form.
+          A screenplay contains an enormous amount of production information, but very little of it arrives in a form software can
+          use directly.
         </p>
         <p>
-          For VFX teams, understanding what a project requires can involve manually reading scripts,
-          identifying relevant moments, interpreting creative intent, anticipating assets and
-          effects, making assumptions and eventually translating all of that into something that can
-          be estimated.
+          For visual effects (VFX) teams, understanding what a project requires can involve reading the screenplay, identifying moments that may require visual effects, interpreting creative intent, anticipating
+          shots, assets and effects, documenting assumptions and eventually translating that work into something that can be
+          estimated financially.
+          <br>
+          <br>
+
+          To a reader, a screenplay appears reasonably structured. To software, it is much messier.
+          Scene headings, dialogue, action, transitions, formatting conventions and writing styles vary between scripts.
         </p>
         <p>
-          This isn't simply a document-extraction problem. Much of the valuable information is
-          implicit, contextual and dependent on production judgement.
+          The process of breaking down a screenplay into shots, assets, effects and assumptions is long and complex. It requires a deep understanding of the production process and the ability to make judgements about the intent of the screenplay.
+          Constant revisions to the screenplay and evolving creative direction make the process that much more challenging.
         </p>
       </div>
     </div>
@@ -51,6 +55,9 @@
       </blockquote>
     </div>
   </section>
+
+  <app-media-placeholder class="project__media" label="LVFX — product screenshot"
+    src="https://i.ibb.co/bjwKsvY6/Screenshot-2026-08-13-at-20-09-49.png" ratio="16 / 9" />
 
   <section class="section" aria-labelledby="worked-on-heading">
     <div class="shell">
@@ -75,10 +82,21 @@
       </div>
 
       <div class="prose case__afterword">
-        <p>
+        <!-- <p>
           The interesting challenge was rarely whether an LLM could generate an answer. It was
           deciding what the model should be asked to do, what context it needed, how its output
           should be represented, and how a human should review and change it afterwards.
+        </p> -->
+      </div>
+
+      <div class="prose case__lede">
+        <p>
+          The challenge was not just building a system that could extract information from a screenplay, but also to build one that users could trust and use effectively.
+        </p>
+        <p>
+          In large movie productions, VFX budgets go well into the tens of millions of dollars. No producer would blindly trust a blackbox that ingests a screenplay and spits out a financial estimate.
+          Every step of the process needs to be transparent and accountable.
+
         </p>
       </div>
     </div>
@@ -159,13 +177,15 @@
 
       <div class="prose case__closing-copy">
         <p>
-          LVFX taught me that the most interesting AI problems often aren't about model capability.
+          LVFX changed how I think about AI products.
         </p>
         <p class="case__closing-line">
-          They're about translating between two worlds: what a technology can do and how a
-          profession actually works.
+          The hard part usually isn't demonstrating that a model can do something impressive.
         </p>
-        <p>That's the intersection I want to keep working in.</p>
+        <p>The hard part is understanding a profession well enough to decide what should be automated, what should become
+        structured data, what needs to remain editable, where deterministic software is better, and where human judgement has to
+        remain authoritative.</p>
+        <p>That is the kind of work I want to keep doing.</p>
 
         <div class="case__actions">
           <app-arrow-link
