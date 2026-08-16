@@ -27,5 +27,11 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/writing/writing').then((m) => m.Writing),
     title: 'Notes — Owen Baldwin',
   },
+  {
+    path: 'writing/know-your-alternates',
+    loadComponent: () =>
+      import('./pages/aviation-product/aviation-product').then((m) => m.AviationProduct),
+    title: 'Fly the plan. Know your alternates. | Owen Baldwin',
+  },
   { path: '**', redirectTo: '' },
 ];

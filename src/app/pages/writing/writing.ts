@@ -23,6 +23,13 @@ export class Writing {
   }
 
   protected readonly notes: Note[] = [
+    {
+      title: 'Fly the plan. Know your alternates.',
+      summary:
+        'What four habits of flight crews might teach product teams building in a world that refuses to sit still.',
+      date: 'Aug 2026',
+      slug: 'know-your-alternates',
+    },
     { title: 'What we learned turning screenplays into structured production data' },
     { title: 'AI adoption starts with workflows, not models' },
     { title: "The difficult part of an AI product isn't always the AI" },
