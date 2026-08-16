@@ -1,0 +1,186 @@
+<article class="case">
+  <header class="case__hero">
+    <div class="shell">
+      <p class="t-label t-label--accent case__eyebrow">Case study — Inceptal</p>
+      <h1 class="t-display case__headline">Helping artists find where they fit.</h1>
+
+      <dl class="case__facts">
+        <div>
+          <dt class="t-label">Role</dt>
+          <dd>Founder, product &amp; AI systems</dd>
+        </div>
+        <div>
+          <dt class="t-label">Domain</dt>
+          <dd>Independent music &amp; artist strategy</dd>
+        </div>
+        <div>
+          <dt class="t-label">Focus</dt>
+          <dd>Context-driven AI, not another wrapper</dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="intro-heading">
+    <div class="shell case__two-col">
+      <h2 id="intro-heading" class="visually-hidden">Introduction</h2>
+      <div class="prose case__lede">
+        <p class="t-lede">
+          Independent artists have more tools than ever. What they're often missing is context: not
+          more data, but a clearer sense of where their work actually fits.
+        </p>
+        <p>
+          Inceptal started from a problem I understood personally as an independent artist.
+          Musicians are constantly told to find comparable acts, understand their audience, build a
+          brand and find the right promotional channels. In practice, none of that is as
+          straightforward as it sounds.
+        </p>
+        <p>
+          Most recommendation systems answer a fairly narrow question: what sounds similar? For an
+          artist trying to build a career, that's rarely enough. Two artists can share musical
+          characteristics while having completely different audiences, identities or trajectories.
+          An artist who isn't an obvious sonic match can be a far more useful reference point.
+        </p>
+      </div>
+    </div>
+
+    <div class="shell">
+      <blockquote class="case__question">
+        <p>Where does my work actually fit, and what should I do with that information?</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="worked-on-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Contribution"
+        heading="What I worked on"
+        headingId="worked-on-heading"
+        aside="Product and AI system design"
+      />
+
+      <div class="case__split">
+        <p class="case__note">The challenge was never a similarity engine. It was a decision.</p>
+
+        <ol class="contributions">
+          @for (item of contributions; track item; let i = $index) {
+            <li>
+              <span class="t-index">{{ pad(i + 1) }}</span>
+              <span>{{ item }}</span>
+            </li>
+          }
+        </ol>
+      </div>
+
+      <div class="prose case__afterword">
+        <p>
+          Creative products are unusually difficult to reduce to clean data. An artist may describe
+          themselves one way while listeners perceive them differently, and their current audience
+          may not represent the one they're trying to reach. There's also an enormous amount of
+          public information out there, but volume and usefulness are not the same thing. That
+          pushed the product away from a conventional database and towards something closer to an
+          evolving research and reasoning system.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="learned-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Reflections"
+        heading="What I learned"
+        headingId="learned-heading"
+      />
+
+      <div class="learnings">
+        @for (learning of learnings; track learning.index) {
+          <section class="learning">
+            <span class="t-index">{{ learning.index }}</span>
+            <h3 class="learning__title">{{ learning.title }}</h3>
+            <div class="prose learning__body">
+              @for (paragraph of learning.body; track paragraph) {
+                <p>{{ paragraph }}</p>
+              }
+            </div>
+          </section>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="system-heading">
+    <div class="shell">
+      <app-section-heading eyebrow="Architecture" heading="The system" headingId="system-heading" />
+
+      <p class="case__note case__note--wide">
+        Rather than attempting the whole vision at once, we've built Inceptal in layers, separating
+        the technical questions from the product questions.
+      </p>
+
+      <ol class="flow" aria-label="Workflow stages, in order">
+        @for (stage of stages; track stage) {
+          <li class="flow__stage">
+            <span class="flow__label">{{ stage }}</span>
+          </li>
+        }
+      </ol>
+
+      <div class="prose case__afterword">
+        <p>
+          Behind that flow is deliberately unglamorous work: testing assumptions, examining poor
+          outputs, and resisting the temptation to treat a good-looking AI response as proof the
+          underlying design is right.
+        </p>
+      </div>
+
+      <div class="case__media">
+        <app-media-placeholder
+          label="Inceptal — product preview"
+          src="https://i.ibb.co/PsQRLB7S/Screenshot-2026-08-16-at-19-26-06.png"
+          note="Screenshots withheld while Inceptal is still under active development."
+          ratio="16 / 9"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section band case__closing" aria-labelledby="closing-heading">
+    <div class="shell case__two-col">
+      <div>
+        <p class="t-label">In closing</p>
+        <h2 id="closing-heading" class="case__closing-heading">Why this work matters to me</h2>
+      </div>
+
+      <div class="prose case__closing-copy">
+        <p>
+          Inceptal has become as much an exercise in product strategy as software development —
+          working across the original user problem, deciding what the product should and shouldn't
+          attempt, the information architecture, the underlying system, and which ideas are worth
+          pursuing.
+        </p>
+        <p class="case__closing-line">
+          The biggest lesson has been that AI makes it very easy to build more than you need.
+        </p>
+        <p>
+          Inceptal is still evolving, so I'm intentionally keeping much of the product itself
+          private for now. But building it has shaped how I now approach AI products more broadly:
+          start with the user's decision, build enough context to understand it, treat generated
+          output with healthy scepticism, and use technology to reduce uncertainty rather than
+          simply produce more information.
+        </p>
+
+        <div class="case__actions">
+          <app-arrow-link
+            label="See selected work"
+            to="/"
+            fragment="selected-work"
+            tone="primary"
+          />
+          <app-arrow-link label="Get in touch" to="/about" fragment="contact" />
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

@@ -18,6 +18,11 @@ export const routes: Routes = [
       'Workflow Automation — From spreadsheet chase to a five-day inventory count | Owen Baldwin',
   },
   {
+    path: 'work/inceptal',
+    loadComponent: () => import('./pages/inceptal/inceptal').then((m) => m.Inceptal),
+    title: 'Inceptal — Helping artists find where they fit | Owen Baldwin',
+  },
+  {
     path: 'about',
     loadComponent: () => import('./pages/about/about').then((m) => m.About),
     title: 'About — Owen Baldwin',
