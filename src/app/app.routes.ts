@@ -18,6 +18,11 @@ export const routes: Routes = [
       'Workflow Automation — From spreadsheet chase to a five-day inventory count | Owen Baldwin',
   },
   {
+    path: 'work/inceptal',
+    loadComponent: () => import('./pages/inceptal/inceptal').then((m) => m.Inceptal),
+    title: 'Inceptal — Helping artists find where they fit | Owen Baldwin',
+  },
+  {
     path: 'about',
     loadComponent: () => import('./pages/about/about').then((m) => m.About),
     title: 'About — Owen Baldwin',
@@ -26,6 +31,18 @@ export const routes: Routes = [
     path: 'writing',
     loadComponent: () => import('./pages/writing/writing').then((m) => m.Writing),
     title: 'Notes — Owen Baldwin',
+  },
+  {
+    path: 'writing/know-your-alternates',
+    loadComponent: () =>
+      import('./pages/aviation-product/aviation-product').then((m) => m.AviationProduct),
+    title: 'Fly the plan. Know your alternates. | Owen Baldwin',
+  },
+  {
+    path: 'writing/automation-creates-a-mess',
+    loadComponent: () =>
+      import('./pages/automation-mess/automation-mess').then((m) => m.AutomationMess),
+    title: 'When automation creates a mess of its own | Owen Baldwin',
   },
   { path: '**', redirectTo: '' },
 ];

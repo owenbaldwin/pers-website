@@ -1,0 +1,254 @@
+<article class="essay">
+  <header class="essay__hero">
+    <div class="shell">
+      <p class="t-label t-label--accent essay__eyebrow">Notes — Internal tools &amp; automation</p>
+      <h1 class="t-display essay__headline">When automation creates a mess of its own.</h1>
+
+      <dl class="essay__facts">
+        <div>
+          <dt class="t-label">Field</dt>
+          <dd>Internal tools</dd>
+        </div>
+        <div>
+          <dt class="t-label">Written</dt>
+          <dd>August 2026</dd>
+        </div>
+        <div>
+          <dt class="t-label">Read</dt>
+          <dd>~7 minutes</dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="intro-heading">
+    <div class="shell">
+      <h2 id="intro-heading" class="visually-hidden">Introduction</h2>
+      <div class="prose essay__lede">
+        <p class="t-lede">
+          I built an inventory tool for the university where I work, watched it work perfectly when
+          I tested it, and then not quite so perfectly once other people got their hands on it. That
+          gap taught me more than the tool itself did.
+        </p>
+        <p>
+          I covered the inventory app I built for the university in
+          <a class="link" routerLink="/work/inventory-app">a previous article</a>. One of the main
+          decisions I made was to keep it as a simple frontend application: no backend, no database.
+        </p>
+        <p>
+          The reasoning was straightforward. A database would have meant storing our entire
+          inventory in a new online system, and this wasn't a commercial platform with a team
+          maintaining it, just a small in-house tool built for one specific task. Storing sensitive
+          company information in a new online system would have introduced a risk that wasn't
+          necessary to solve the problem, and one management would quite reasonably have been
+          uncomfortable with. So the app had to stay simple.
+        </p>
+        <p>
+          Our inventory already existed as a spreadsheet, the same format we'd used in previous
+          years, and the updated inventory ultimately had to go back into our main asset-management
+          platform as a spreadsheet too. The simplest approach was to use that spreadsheet as the
+          source of truth. A user would upload the latest version, scan the assets for their shift,
+          download the updated file, and save it back into our Microsoft 365 environment.
+        </p>
+        <p>
+          It solved the main bottleneck very well: finding and updating assets manually inside a
+          spreadsheet.
+        </p>
+      </div>
+
+      <blockquote class="essay__quote">
+        <p>
+          There's a big difference between building and successfully testing a tool yourself, and
+          watching non-technical colleagues use it in the real world.
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="mess-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Part 01"
+        heading="Then other people started using it"
+        headingId="mess-heading"
+      />
+
+      <div class="prose">
+        <p>
+          Despite clear SOPs and step-by-step guides, things went wrong in ways I hadn't fully
+          anticipated.
+        </p>
+        <p>
+          Some people uploaded an older version of the spreadsheet. Some uploaded an entirely
+          different spreadsheet. A few somehow managed to use the wrong version of the app
+          altogether.
+        </p>
+        <p>
+          That last one was partly my fault. I'd shared the link to the final application but never
+          disabled an early prototype that was still sitting on an old Claude Artifact link. Six
+          months later, someone found it and used that instead.
+        </p>
+        <p>Others saved their updated inventory file into the wrong Microsoft 365 folder.</p>
+        <p>
+          None of this broke the underlying inventory data. But it scattered the work across
+          multiple files, versions and locations. The app had made the physical inventory
+          dramatically faster, days rather than weeks, but it had left behind a small
+          reconciliation problem for me to clean up.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="tool-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Part 02"
+        heading="So I built a second tool"
+        headingId="tool-heading"
+      />
+
+      <div class="prose">
+        <p>
+          Rather than manually comparing thousands of rows across several Excel files, I built
+          another small application for myself. Its only job was reconciliation: it compared the
+          different inventory files against a master spreadsheet, identified the changes, and helped
+          consolidate everything back into one clean source of truth.
+        </p>
+        <p>
+          Again, I used AI heavily to build it. But there was no AI inside the application itself.
+          For this job I needed deterministic comparison of thousands of spreadsheet rows, not a
+          language model deciding whether two records "probably" matched.
+        </p>
+        <p>
+          The result was a clean master inventory and about an hour of reconciliation work. The
+          overall project was still a major improvement on the previous process. But it left me with
+          a more important lesson than the original app did.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="users-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Part 03"
+        heading="The real system includes the users"
+        headingId="users-heading"
+      />
+
+      <div class="prose">
+        <p>
+          When people talk about internal automation, it's easy to think primarily about the
+          workflow: where is time being wasted, what can we automate, what can an engineer build
+          quickly.
+        </p>
+        <p>
+          AI has made this much more interesting, because small, highly specific pieces of software
+          are now dramatically cheaper and faster to create. I've seen more companies talk about
+          putting technical people directly inside departments like HR, sales, operations or
+          marketing, with the goal of finding and automating these workflows from within. I think
+          there's enormous potential in that model.
+        </p>
+        <p>
+          But there's a part of it that's easy to underestimate: most of the people using these
+          tools aren't engineers. They may not know, or particularly care, what's happening
+          underneath the interface. They may not understand which file is the source of truth. They
+          may not realise that uploading yesterday's spreadsheet instead of today's creates a
+          completely different outcome. They may see a new internal tool as one more thing to learn
+          rather than an improvement to their workflow. And sometimes they'll simply click the wrong
+          thing.
+        </p>
+        <p>That isn't a criticism of the user. It's a constraint of the system you're designing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="misuse-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Part 04"
+        heading="Design for misuse, not just correct use"
+        headingId="misuse-heading"
+      />
+
+      <div class="prose">
+        <p>
+          An engineer tends to test the happy path: upload the right file, click the right button,
+          follow the instructions, save the result where it belongs.
+        </p>
+        <p>
+          Real usage is less tidy. If a tool is going to be deployed across an organisation, it
+          needs to account for that. That can mean:
+        </p>
+      </div>
+
+      <ol class="misuse-list">
+        @for (item of misuseChecklist; track item) {
+          <li>{{ item }}</li>
+        }
+      </ol>
+
+      <div class="prose essay__afterword">
+        <p>
+          The lesson for me wasn't that lightweight internal software is a bad idea. Quite the
+          opposite, I think we'll see far more of it. The lesson is that building the automation is
+          only part of the work. You also need to think about the mess that imperfect human use will
+          inevitably create.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="early-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Part 05"
+        heading="We are still early"
+        headingId="early-heading"
+      />
+
+      <div class="prose">
+        <p>
+          There's probably a wider transition happening here. Thirty years ago, using a computer or
+          sending an email was still a specialist skill for a large part of the workforce. Today,
+          almost every job involves some level of interaction with software.
+        </p>
+        <p>
+          I suspect AI-driven tools and small internal applications will follow a similar path.
+          People don't need to become engineers. But over time, basic technical literacy will
+          probably expand: understanding what data a tool is using, what a source of truth is, what
+          an automated workflow can and can't safely do.
+        </p>
+        <p>
+          Until then, organisations building internal tools need to design around the reality that
+          users will misunderstand them, misuse them, break processes around them, and occasionally
+          create a mess.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band essay__closing" aria-labelledby="closing-heading">
+    <div class="shell essay__closing-grid">
+      <div>
+        <p class="t-label">In closing</p>
+        <h2 id="closing-heading" class="essay__closing-heading">Build the hoover too</h2>
+      </div>
+
+      <div class="prose essay__closing-copy">
+        <p>
+          None of this is an argument against small, fast, AI-assisted internal tools. If anything,
+          I think we'll build a lot more of them.
+        </p>
+        <p class="essay__closing-line">
+          So when we build the automation, we should probably build the hoover too.
+        </p>
+
+        <div class="essay__actions">
+          <app-arrow-link label="More writing" to="/writing" tone="primary" />
+          <app-arrow-link label="Get in touch" to="/about" fragment="contact" />
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

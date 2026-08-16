@@ -1,0 +1,267 @@
+<article class="essay">
+  <header class="essay__hero">
+    <div class="shell">
+      <p class="t-label t-label--accent essay__eyebrow">Notes — Aviation &amp; product</p>
+      <h1 class="t-display essay__headline">Fly the plan. Know your alternates.</h1>
+
+      <dl class="essay__facts">
+        <div>
+          <dt class="t-label">Field</dt>
+          <dd>Product &amp; aviation</dd>
+        </div>
+        <div>
+          <dt class="t-label">Written</dt>
+          <dd>August 2026</dd>
+        </div>
+        <div>
+          <dt class="t-label">Read</dt>
+          <dd>~6 minutes</dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="intro-heading">
+    <div class="shell">
+      <h2 id="intro-heading" class="visually-hidden">Introduction</h2>
+      <div class="prose essay__lede">
+        <p class="t-lede">
+          I grew up around aviation, and the thing that stuck wasn't the glamour of it. It was the
+          assumption, built into everything, that the plan you take off with is not necessarily the
+          plan you land with.
+        </p>
+        <p>
+          A flight has a destination, a route, fuel calculated to the last kilo and a plan
+          worked out to the minute, and yet still is built entirely around the idea that none of it may
+          survive contact with the weather. Runways close. Traffic backs up. Something in the
+          aircraft doesn't behave. Occasionally, the destination you set off towards simply stops
+          being the right place to land.
+        </p>
+        <p>
+          That way of thinking has started to feel rather relevant to building technology products,
+          especially now. AI has made software dramatically faster and cheaper to build, but faster
+          execution doesn't make the world outside any more predictable. If anything, markets,
+          competitors and what's technically possible can now change faster than most organisations
+          can turn a plan around.
+        </p>
+      </div>
+
+      <blockquote class="essay__quote">
+        <p>
+          A good product plan can't just describe where you're going. It also has to leave you
+          capable of changing course.
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="alternates-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Lesson 01"
+        heading="Have alternate airports"
+        headingId="alternates-heading"
+      />
+
+      <div class="prose">
+        <p>
+          A flight plan is never just a destination. Long before departure, a pilot has already
+          worked out where else the aircraft could go, because if the weather turns, a runway
+          shuts, or an engine fails, there needs to be somewhere else to land, and enough fuel or altitude left to get there.
+        </p>
+        <p>
+          Startups have a destination too, a particular customer, a product, a workflow, a market,
+          but the risk is building so tightly around that one destination that changing tack later
+          becomes eye-wateringly expensive.
+        </p>
+        <p>
+          In a world where a competitor can turn up overnight, a model provider can make an entire
+          feature obsolete over a weekend, or customers can simply change their minds faster than
+          the roadmap allows, it's worth asking, quite deliberately: where are our alternate
+          airports?
+        </p>
+        <p>
+          This isn't an excuse for a wandering strategy. A flight doesn't drift between airports
+          because the crew can't make up their minds, the destination stays clear throughout. But
+          it's worth knowing which adjacent problems, customers or capabilities would become viable
+          if the ground shifted beneath you.
+        </p>
+        <p>
+          That has architectural consequences too. The best product for today's problem isn't
+          necessarily the most tightly wound implementation you can build. You want enough structure
+          to solve the problem in front of you very well, while leaving sensible seams where the
+          workflow, the data model or the technology can evolve later.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="section" aria-labelledby="observe-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Lesson 02"
+        heading="Observe before you orient"
+        headingId="observe-heading"
+      />
+
+      <div class="prose">
+        <p>
+          The OODA loop — Observe, Orient, Decide, Act — comes from military aviation, and its most
+          useful lesson for product work was never simply "move fast". It's that action sits inside
+          a loop, and the loop only works if you keep feeding it.
+        </p>
+        <p>
+          A startup can quietly invert the whole thing into: Decide, Build, Defend the decision.
+          Once a few months of work have gone into something, a team gets attached to whatever
+          assumptions produced it, understandably enough.
+        </p>
+        <p>
+          The better loop looks more like: what's actually happening? What does that mean for our
+          customers and our market? What should change? And can we test that quickly? Then round
+          again.
+        </p>
+        <p>
+          AI makes the "Act" part of all this much faster, which makes the other three stages more
+          important, not less. If building something now takes two days instead of two months, the
+          bottleneck shifts — it becomes whether you observed the right problem in the first place,
+          and read it correctly. Fast execution of a bad read on the situation just gets you to the
+          wrong place more quickly.
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section" aria-labelledby="monitoring-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Lesson 02"
+        heading="Separate flying from monitoring"
+        headingId="monitoring-heading"
+      />
+
+      <div class="prose">
+        <p>
+          Commercial aviation deliberately splits the job in two: a Pilot Flying and a Pilot
+          Monitoring. One is actively controlling the aircraft. The other is watching the aircraft,
+          the systems, the surroundings, and of course the person flying.
+        </p>
+        <p>
+          That split exists because whoever is doing the task is usually the worst-placed person to
+          notice everything going wrong around it. There's an obvious product equivalent: the people
+          closest to building something naturally get absorbed in making it work. Someone still has
+          to ask whether it's the right thing to be building, whether the market has shifted,
+          whether users are behaving differently than expected, or whether some earlier technical
+          decision has quietly introduced a risk nobody's watching any more.
+        </p>
+        <p>
+          None of this requires bureaucracy, or a second team looking over the first one's shoulder.
+          In a small company the two roles might swap between the same pair of people depending on
+          the day. What matters is creating a moment where someone is explicitly responsible for
+          watching rather than doing. Sometimes the most useful thing you can contribute to a
+          project isn't another pair of hands on the controls. It's noticing that the aircraft has
+          started to drift.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="failures-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Lesson 03"
+        heading="Assume the failures will line up"
+        headingId="failures-heading"
+      />
+
+      <div class="prose">
+        <p>
+          The Swiss cheese model describes safety as layers of defence, each one riddled with its
+          own holes. Usually a single weakness doesn't cause a disaster, because another layer
+          catches it. The serious failures happen when several holes happen to line up.
+        </p>
+        <p>
+          Software behaves the same way. A model misreads a request. The application doesn't check
+          its output. The interface doesn't make the proposed change clear. The user approves it
+          without quite noticing. There's no meaningful undo. None of those, alone, is necessarily
+          catastrophic. All of them together might be.
+        </p>
+        <p>
+          Which is why I'm wary of any product thinking that tries to solve reliability with a
+          single safeguard. "There's a confirmation button." "We have tests." "The model's very
+          accurate." "We'll keep a human in the loop." None of these is sufficient on its own. The
+          sturdier systems stack several imperfect layers: good defaults, constrained tools,
+          validation, visible consequences, human review, an audit trail, and the ability to undo,
+          and while you won't need every layer for every action, anything consequential shouldn't
+          rest on just one of them going right.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="checklists-heading">
+    <div class="shell">
+      <app-section-heading
+        eyebrow="Lesson 04"
+        heading="Even the experts fly checklists"
+        headingId="checklists-heading"
+      />
+
+      <div class="prose">
+        <p>
+          One of the properly counter-intuitive things about aviation is how religiously experienced
+          pilots stick to checklists. Not because they don't know what they're doing but rather because
+          humans are, by nature, inconsistent. Expertise doesn't cure distraction, fatigue,
+          interruption, or a memory that simply drops something under pressure.
+        </p>
+        <p>
+          There's a useful lesson here for startups, where informality tends to get treated as a
+          virtue in itself. Not everything needs a process. But the things you do repeatedly, and
+          genuinely cannot afford to forget, probably deserve one: deployments, big demos, data
+          migrations, customer onboarding, security reviews, investor materials, important releases.
+        </p>
+        <p>
+          A lightweight checklist isn't bureaucracy if it reliably stops an expensive mistake. It's
+          simply memory, externalised.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band essay__closing" aria-labelledby="closing-heading">
+    <div class="shell essay__closing-grid">
+      <div>
+        <p class="t-label">In closing</p>
+        <h2 id="closing-heading" class="essay__closing-heading">
+          The point isn't to fly cautiously
+        </h2>
+      </div>
+
+      <div class="prose essay__closing-copy">
+        <p>
+          Aviation might sound an odd analogy for startups: modern commercial flying is
+          deliberately conservative, and startups are meant to move quickly. But I don't think the
+          useful lesson here is caution. It's prepared adaptability.
+        </p>
+        <p class="essay__closing-line">
+          A good crew has a destination, they act decisively, they divide the work and they keep
+          watching what's actually happening.
+        </p>
+        <p>
+          They assume that people and systems will occasionally fail, and they always know where
+          else they could land if reality has other ideas about the original plan.
+        </p>
+        <p>
+          That feels like a rather useful way to think about building products in 2026. The cost of
+          changing the software is falling fast. The cost of staying loyal to the wrong assumption, however,
+          isn't.
+        </p>
+        <p>So build for the destination. Just make sure you know where your alternates are.</p>
+
+        <div class="essay__actions">
+          <app-arrow-link label="More writing" to="/writing" tone="primary" />
+          <app-arrow-link label="Get in touch" to="/about" fragment="contact" />
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

@@ -8,6 +8,5 @@ export const siteLinks = {
   // TODO(owen): replace with the email address you want to publish.
   email: 'mailto:owenabaldwin@gmail.com',
   emailLabel: 'owenabaldwin@gmail.com',
-  // TODO(owen): drop a PDF into public/ (e.g. public/owen-baldwin-cv.pdf) and update this path.
   cv: '/owen-baldwin-cv.pdf',
 } as const;

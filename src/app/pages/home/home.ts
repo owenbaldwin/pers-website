@@ -26,7 +26,7 @@ export class Home {
     {
       index: '02',
       title: 'Reduce it to something buildable',
-      body: 'I turn that complexity into entities, workflows, assumptions and smaller product problems — then identify the simplest useful version worth testing.',
+      body: 'I turn that complexity into entities, workflows, assumptions and smaller product problems, then identify the simplest useful version worth testing.',
     },
     {
       index: '03',
@@ -46,10 +46,10 @@ export class Home {
     'Product discovery',
     'Workflow automation',
     'Rapid prototyping',
-    'RAG and retrieval systems',
+    'Early-stage start-ups',
     'Agentic workflows',
-    'Domain modelling',
-    'Creative technology',
-    'Film & media technology',
+    'Business development',
+    'Creative industries',
+    'Music, film & media technology',
   ];
 }
