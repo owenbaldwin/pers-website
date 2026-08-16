@@ -24,6 +24,13 @@ export class Writing {
 
   protected readonly notes: Note[] = [
     {
+      title: 'When automation creates a mess of its own',
+      summary:
+        'Building a small inventory tool taught me less about automation than about what happens once real people start using it.',
+      date: 'Aug 2026',
+      slug: 'automation-creates-a-mess',
+    },
+    {
       title: 'Fly the plan. Know your alternates.',
       summary:
         'What four habits of flight crews might teach product teams building in a world that refuses to sit still.',

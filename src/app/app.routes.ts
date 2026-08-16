@@ -33,5 +33,11 @@ export const routes: Routes = [
       import('./pages/aviation-product/aviation-product').then((m) => m.AviationProduct),
     title: 'Fly the plan. Know your alternates. | Owen Baldwin',
   },
+  {
+    path: 'writing/automation-creates-a-mess',
+    loadComponent: () =>
+      import('./pages/automation-mess/automation-mess').then((m) => m.AutomationMess),
+    title: 'When automation creates a mess of its own | Owen Baldwin',
+  },
   { path: '**', redirectTo: '' },
 ];

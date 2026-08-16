@@ -1,0 +1,132 @@
+/* ---- Hero --------------------------------------------------------------- */
+
+.essay__hero {
+  padding-block: clamp(3.5rem, 8vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+.essay__eyebrow {
+  padding-bottom: var(--s-2);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--color-border-strong);
+}
+
+.essay__headline {
+  max-width: 24ch;
+}
+
+.essay__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3) clamp(2rem, 5vw, 4.5rem);
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: var(--s-3);
+  border-top: var(--rule-hair);
+}
+
+.essay__facts dd {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+}
+
+/* ---- Lede & quote --------------------------------------------------------- */
+
+.essay__lede {
+  max-width: var(--measure-wide);
+}
+
+.essay__quote {
+  max-width: 32ch;
+  margin: clamp(3rem, 6vw, 5rem) 0 0;
+  padding-left: clamp(1.25rem, 3vw, 2.5rem);
+  border-left: 1px solid var(--color-accent);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.9vw, 2.35rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.24;
+  text-wrap: balance;
+}
+
+.essay__afterword {
+  max-width: var(--measure-wide);
+  margin-top: clamp(2rem, 4vw, 3rem);
+  color: var(--color-text-secondary);
+}
+
+/* ---- Misuse checklist ------------------------------------------------------ */
+
+.misuse-list {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: var(--measure-wide);
+  border-top: var(--rule-hair);
+}
+
+.misuse-list li {
+  position: relative;
+  padding: 0.85rem 0 0.85rem 1.75rem;
+  border-bottom: var(--rule-hair);
+  font-size: 1.02rem;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+
+.misuse-list li::before {
+  content: '\2014';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+/* ---- Closing -------------------------------------------------------------- */
+
+.essay__closing-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(1.25rem, 2.6vw, 2.75rem);
+  row-gap: var(--s-4);
+}
+
+.essay__closing-grid > div:first-child {
+  grid-column: 1 / span 4;
+}
+
+.essay__closing-heading {
+  margin-top: var(--s-3);
+  max-width: 14ch;
+  font-size: var(--t-h2);
+}
+
+.essay__closing-copy {
+  grid-column: 6 / span 7;
+  color: var(--color-text-secondary);
+}
+
+.essay__closing-line {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.essay__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-4);
+  margin-top: var(--s-4);
+}
+
+/* ---- Responsive ------------------------------------------------------------ */
+
+@media (max-width: 52rem) {
+  .essay__closing-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .essay__closing-grid > div:first-child,
+  .essay__closing-copy {
+    grid-column: 1 / -1;
+  }
+}
